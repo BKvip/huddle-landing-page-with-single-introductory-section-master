@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>
+      Frontend Mentor | Huddle landing page with single introductory section
+    </title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+      /* font-family: 'Open Sans', sans-serif; */
+      /* font-family: 'Poppins', sans-serif; */
+      body {
+        box-sizing: content-box;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        /* height: 100vh; */
+        /* justify-content: center; */
+        background-image: url("images/bg-desktop.svg");
+        background-repeat: repeat-y;
+        background-size: auto;
+        background-color: hsl(257, 40%, 49%);
+      }
+
+      main {
+        margin: 50px auto;
+      }
+      header {
+        margin-bottom: 50px;
+      }
+      aside {
+        display: flex;
+        flex-direction: row;
+        color: #fff;
+        font-weight: 400;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        margin-left: 50px;
+      }
+      .card-title {
+        font-family: "Poppins", sans-serif;
+        font-size: 25px;
+        font-weight: 600;
+      }
+      .card-detail {
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        width: 500px;
+      }
+
+      .card-bt {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+
+        padding: 10px 30px;
+        background-color: #fff;
+        border-radius: 20px;
+        width: 150px;
+        text-align: center;
+        box-shadow: 5px 5px 10px 5px #2424242e;
+        text-decoration: none;
+        color: hsl(257, 40%, 49%);
+      }
+      .card-bt:hover {
+        background-color: hsl(300, 69%, 71%);
+        color: #fff;
+        transition: all 0.5s;
+      }
+      .icon {
+        margin-top: 150px;
+        text-align: end;
+      }
+      .icon a {
+        text-decoration: none;
+      }
+      .icon-facebook {
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 50px;
+        padding: 10px 13px;
+        color: #fff;
+        margin: 0px 5px;
+      }
+      .icon-facebook:hover {
+        color: hsl(300, 69%, 71%);
+        border: 2px solid hsl(300, 69%, 71%);
+        transition: all 0.5s;
+      }
+      .icon-ring {
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 50px;
+        padding: 10px;
+        color: #fff;
+        margin: 0px 5px;
+      }
+      .icon-ring:hover {
+        color: hsl(300, 69%, 71%);
+        border: 2px solid hsl(300, 69%, 71%);
+        transition: all 0.5s;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: right;
+      }
+      .attribution a {
+        color: hsl(300, 69%, 71%);
+      }
+      .image-mockups{
+        max-width: 650px;
+      }
+
+      @media only screen and (max-width: 550px) {
+        body {
+          background-image: url("images/bg-mobile.svg");
+          background-repeat:repeat-x; 
+          background-size: contain;
+          
+           
+          background-color: hsl(257, 40%, 49%); 
+          display: flex;
+          flex-direction: row; 
+        } 
+      
+        aside {
+          display: flex;
+          flex-direction: column;
+          text-align: center; 
+        }
+
+        .card { 
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px; 
+        margin-left: 0px;
+      }
+      .card-title { 
+        font-size: 30px;
+        font-weight: 600;
+      }
+      .card-detail { 
+        font-size: 16px;
+        font-weight: 360;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 50px; 
+        max-width: 300px;
+      }
+
+      .card-bt { 
+        font-size: 16px; 
+        padding: 20px 100px; 
+        border-radius: 50px;
+        width: 150px;
+        text-align: center;
+        box-shadow: 5px 5px 10px 5px #2424242e;
+        text-decoration: none;
+        color: hsl(257, 40%, 49%);
+      } 
+      .image-mockups{
+        max-width: 300px;
+      }
+      .icon {
+        margin-top: 80px;
+        text-align: center;
+      }
+      .icon-ring {
+        font-size: 25px;
+      }
+      .icon-facebook {
+        font-size: 25px;
+      }
+      .attribution {
+        margin-top: 30px;
+        font-size: 10px;
+        text-align: center;
+      }
+      
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="./images/logo.svg" alt="header" height="50px" />
+      </header>
+      <aside>
+        <div>
+          <img src="./images/illustration-mockups.svg" alt="mockups" class="image-mockups" />
+        </div>
+        <div class="card">
+          <div class="card-title">Build The Community</div>
+          <div class="card-title">Your Fans Will Love</div>
+          <div class="card-detail">
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </div>
+          <div>
+            <a href="#" class="card-bt">Register</a>
+          </div>
+          <div class="icon">
+            <a href="#">
+              <i class="icon-facebook fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#"> <i class="icon-ring fa-brands fa-twitter"></i></a>
+            <a href="#"> <i class="icon-ring fa-brands fa-instagram"></i></a>
+          </div>
+          <footer>
+            <p class="attribution">
+              Challenge by
+              <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+              >. Coded by <a href="#">Your Name Here</a>.
+            </p>
+          </footer>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>
